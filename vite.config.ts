@@ -14,8 +14,6 @@ export default createAppConfig({
 	vueGpxComparison: 'src/vueGpxComparison.js',
 	filesPlugin: 'src/filesPlugin.js',
 	adminSettings: 'src/adminSettings.js',
-	// gpxpod: 'src/gpxpod.js',
-	// gpxvcomp: 'src/gpxvcomp.js'
 }, {
 	config: {
 		css: {
@@ -23,8 +21,8 @@ export default createAppConfig({
 				localsConvention: 'camelCase',
 			},
 		},
-		plugins: [eslint(), stylelint()],
+		// plugins: [eslint(), stylelint()],
 	},
 	inlineCSS: { relativeCSSInjection: true },
-	minify: isProduction,
+	// minify: isProduction,
 })

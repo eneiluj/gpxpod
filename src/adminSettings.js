@@ -10,9 +10,10 @@
  */
 
 document.addEventListener('DOMContentLoaded', async (event) => {
-	const { default: Vue } = await import('vue')
-	Vue.mixin({ methods: { t, n } })
+	const { createApp } = await import('vue')
 	const { default: AdminSettings } = await import('./components/AdminSettings.vue')
-	const View = Vue.extend(AdminSettings)
-	new View().$mount('#gpxpod_prefs')
+
+	const app = createApp(AdminSettings)
+	app.mixin({ methods: { t, n } })
+	app.mount('#gpxpod_prefs')
 })

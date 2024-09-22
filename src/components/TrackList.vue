@@ -18,7 +18,7 @@
 				</template>
 			</NcAppNavigationItem>
 			<NcTextField
-				:value.sync="filterQuery"
+				v-model="filterQuery"
 				:label="filterPlaceholder"
 				:show-trailing-button="!!filterQuery"
 				class="filter-input"
