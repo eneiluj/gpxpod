@@ -23,6 +23,8 @@
 				:size="20" />
 		</template>
 		<template #counter>
+			<!-- TODO use this after @nc/vue 9.0.0-alpha.5 -->
+			<!--NcCounterBubble v-if="!!Object.keys(directory.tracks).length" :count="Object.keys(directory.tracks).length" /-->
 			<NcCounterBubble v-if="!!Object.keys(directory.tracks).length">
 				{{ Object.keys(directory.tracks).length || '' }}
 			</NcCounterBubble>
